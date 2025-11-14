@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <title>What Is Causing AI Hallucinations With Analytics</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,53 +13,47 @@
   <!-- Navbar -->
   <div id="navbar"></div>
 
-<!-- MAIN CONTENT CARD -->
-<div class="max-w-5xl mx-auto mt-10 border border-gray-300 rounded-md p-6 md:flex gap-6 items-start bg-white">
+  <!-- MAIN CONTENT CARD -->
+  <div class="max-w-5xl mx-auto mt-10 rounded-md p-6 md:flex gap-2 items-start bg-white">
 
-  <!-- Left Thumbnail -->
-  <div class="md:w-1/4 w-full flex justify-center md:block">
-    <div class="w-40">
-      <img src="assets/images/image43a.png" alt="AI Hallucinations" class="w-full rounded">
-      <button onclick="goRegister()" 
-        class="mt-4 w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700">
-        READ NOW
-      </button>
+    <!-- Left Thumbnail -->
+    <div class="md:w-1/4 w-full flex justify-center md:block">
+      <div class="w-40">
+        <img src="assets/images/image43a.png" alt="AI Hallucinations" class="w-full rounded">
+        <button onclick="goRegister()"
+          class="mt-4 w-full bg-red-600 text-white font-semibold py-2 rounded hover:bg-red-700">
+          READ NOW
+        </button>
+      </div>
+    </div>
+
+    <!-- Right Content (MOVED DOWN) -->
+    <div class="md:w-3/4 mt-10 md:mt10">  
+      <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
+        What Is Causing AI Hallucinations With Analytics?
+      </h2>
+
+      <p class="text-gray-700 leading-relaxed mb-6">
+        AI hallucinations in analytics occur when models generate confident but fabricated answers because
+        they lack direct access to live enterprise data, business rules, and governance controls, which is
+        why 88% of AI pilots fail to reach production.
+        <br><br>
+        This blog introduces Simba Intelligence, an AI Semantic Platform that connects AI directly to governed,
+        live data sources with full audit trails, ensuring every insight is deterministic, traceable, and
+        compliant with enterprise data policies.
+      </p>
     </div>
   </div>
 
-  <!-- Right Content -->
-  <div class="md:w-3/4 mt-6 md:mt-0">
-    <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-4">
-      What Is Causing AI Hallucinations With Analytics?
-    </h2>
-
-    <p class="text-gray-700 leading-relaxed mb-6">
-      AI hallucinations in analytics occur when models generate confident but fabricated answers because 
-      they lack direct access to live enterprise data, business rules, and governance controls, which is 
-      why 88% of AI pilots fail to reach production.
-      <br><br>
-      This blog introduces Simba Intelligence, an AI Semantic Platform that connects AI directly to governed, 
-      live data sources with full audit trails, ensuring every insight is deterministic, traceable, and 
-      compliant with enterprise data policies.
-    </p>  
-
-    <!-- add in centered button -->
-
-    <button onclick="goRegister()" 
-      class="text-red-600 font-bold text-lg hover:underline mx-auto block">
-      READ NOW
-    </button>
-  </div>
-
-</div>
-
+  <!-- Centered READ NOW button -->
+  <button onclick="goRegister()" class="text-red-600 font-bold text-lg hover:underline block mx-auto">
+    READ NOW
+  </button>
 
   <!-- Footer -->
   <div id="footer" class="mt-12"></div>
 
-  <!-- JS -->
   <script>
-    // Load navbar and footer
     fetch('navbar.html')
       .then(res => res.text())
       .then(data => document.getElementById('navbar').innerHTML = data);
@@ -69,13 +62,9 @@
       .then(res => res.text())
       .then(data => document.getElementById('footer').innerHTML = data);
 
-    // Register actions
     function goRegister() {
       window.open('register.html', '_blank');
     }
-
-    document.getElementById('registerBtn').addEventListener('click', goRegister);
-    document.getElementById('registerText').addEventListener('click', goRegister);
   </script>
 
 </body>
